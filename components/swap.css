@@ -1,56 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --bg-color-body: #3b465b;
-  --bg-color-inputswap: #4D5C77;
-  --primary-color: #F56093;
-  --text-color-primary: #fff;
-}
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    width: 100%;
-    height:100%;
-    background-color: var(--bg-color-body)
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
-
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
-
 .swap {
   display: flex;
   flex-direction: column;
@@ -58,9 +5,6 @@ input[type=number] {
   width: 30vw;
   padding: 1.5rem 1rem 1.5rem 1rem;
   border-radius: 10px;
-  justify-content: center;
-  margin: 0 auto;
-  min-height: 100vh
 }
 .swap-header {
   display: flex;
@@ -92,14 +36,15 @@ input[type=number] {
 }
 .slippage {
   font-size: 1rem;
-  font-weight: 400; color: var(--text-color-primary)
+  font-weight: 400;
+  color: #9cd5ff;
 }
 .from,
 .to {
   display: flex;
   flex-direction: column;
   padding: 15px;
-  background-color: var(--bg-color-inputswap);
+  background-color: rgb(255 255 255 / 50%);
   border-radius: 10px;
 }
 .balance {
@@ -108,7 +53,6 @@ input[type=number] {
   justify-content: space-between;
   font-size: 0.875rem;
   padding-bottom: 0.5rem;
-  color: var(--text-color-primary)
 }
 .token {
   display: flex;
@@ -124,7 +68,7 @@ input[type=number] {
   gap: 8px;
   cursor: pointer;
   font-weight: bold;
-  color: var(--text-color-primary)
+  color: var(--text)
 }
 #fr_amt,
 #to_amt {
@@ -141,24 +85,24 @@ input[type=number] {
   width: 28px;
   height: 28px;
 }
-#arrow_switch_tokens {
+#switch_tokens {
   padding: 6px;
-  transform: rotate(0deg);
+  transform: rotate(180deg);
   transition: transform 1s;
   position: absolute;
   left: 49%;
   top: 43%;
-  background-color: var(--primary-color);
+  background-color: hsl(272deg 100% 41%);
   border-radius: 50px;
 }
-#arrow_switch_tokens:hover {
+#switch_tokens:hover {
   transform: rotate(180deg);
   cursor: pointer;
 }
 .swap-footer {
   width: 100%;
   text-align: center;
-  background-color: var(--primary-color);
+  background-color: hsl(272deg 100% 41% / 80%);
   border-radius: 15px;
   margin-top: 1rem;
   padding: 10px 0;
